@@ -30,7 +30,7 @@ $time\
 [](fg:color_bg1)\
 $line_break$character"""
 
-palette = 'everforest'
+palette = 'catppuccin'
 
 # ============================================================================
 # PALETTES — segment colors darkened (40% color / 60% background)
