@@ -1,0 +1,323 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[░▒▓](color_accent)\
+$os\
+$username\
+[](bg:color_secondary fg:color_accent)\
+$directory\
+[](fg:color_secondary bg:color_tertiary)\
+$git_branch\
+$git_status\
+[](fg:color_tertiary bg:color_quaternary)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$bun\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:color_quaternary  bg:color_bg3)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:color_bg3 bg:color_bg1)\
+$time\
+[](fg:color_bg1)\
+$line_break$character"""
+
+palette = 'everforest'
+
+# ============================================================================
+# PALETTES — segment colors darkened (40% color / 60% background)
+# ============================================================================
+
+[palettes.catppuccin]
+color_fg0 = '#cdd6f4'
+color_bg1 = '#313244'
+color_bg3 = '#393a4c'
+color_accent = '#73495e'
+color_secondary = '#745f78'
+color_tertiary = '#485a7f'
+color_quaternary = '#598081'
+color_green = '#a6e3a1'
+color_purple = '#f5c2e7'
+color_red = '#f38ba8'
+
+[palettes.ethereal]
+color_fg0 = '#ffcead'
+color_bg1 = '#212945'
+color_bg3 = '#2b3555'
+color_accent = '#622b36'
+color_secondary = '#605131'
+color_tertiary = '#353a68'
+color_quaternary = '#546577'
+color_green = '#92a593'
+color_purple = '#c89dc1'
+color_red = '#ED5B5A'
+
+[palettes.everforest]
+color_fg0 = '#d3c6aa'
+color_bg1 = '#3a4349'
+color_bg3 = '#3f494f'
+color_accent = '#4d6a6b'
+color_secondary = '#726b56'
+color_tertiary = '#5d6c56'
+color_quaternary = '#816778'
+color_green = '#a7c080'
+color_purple = '#d699b6'
+color_red = '#e67e80'
+
+[palettes.gruvbox]
+color_fg0 = '#d4be98'
+color_bg1 = '#32302f'
+color_bg3 = '#363331'
+color_accent = '#4a5d59'
+color_secondary = '#6e5a3a'
+color_tertiary = '#4e604c'
+color_quaternary = '#526b65'
+color_green = '#a9b665'
+color_purple = '#d3869b'
+color_red = '#ea6962'
+
+[palettes.matte_black]
+color_fg0 = '#bebebe'
+color_bg1 = '#222222'
+color_bg3 = '#292929'
+color_accent = '#664310'
+color_secondary = '#70580d'
+color_tertiary = '#5f3030'
+color_quaternary = '#686868'
+color_green = '#FFC107'
+color_purple = '#D35F5F'
+color_red = '#D35F5F'
+
+[palettes.nord]
+color_fg0 = '#d8dee9'
+color_bg1 = '#343b49'
+color_bg3 = '#373d4c'
+color_accent = '#684650'
+color_secondary = '#79705e'
+color_tertiary = '#526c79'
+color_quaternary = '#576a80'
+color_green = '#a3be8c'
+color_purple = '#b48ead'
+color_red = '#bf616a'
+
+[palettes.osaka_jade]
+color_fg0 = '#C1C497'
+color_bg1 = '#1a2921'
+color_bg3 = '#1d2e25'
+color_accent = '#656024'
+color_secondary = '#1c6657'
+color_tertiary = '#5e3a4c'
+color_quaternary = '#305846'
+color_green = '#549e6a'
+color_purple = '#D2689C'
+color_red = '#FF5345'
+
+[palettes.retro_82]
+color_fg0 = '#f6dcac'
+color_bg1 = '#1a2638'
+color_bg3 = '#232b3c'
+color_accent = '#66302a'
+color_secondary = '#675245'
+color_tertiary = '#034255'
+color_quaternary = '#486b73'
+color_green = '#028391'
+color_purple = '#3f8f8a'
+color_red = '#f85525'
+
+[palettes.ristretto]
+color_fg0 = '#e6d9db'
+color_bg1 = '#4f4747'
+color_bg3 = '#5d5455'
+color_accent = '#7b4e43'
+color_secondary = '#7e6741'
+color_tertiary = '#4f6d67'
+color_quaternary = '#6a6788'
+color_green = '#adda78'
+color_purple = '#a8a9eb'
+color_red = '#fd6883'
+
+[palettes.rose_pine]
+color_fg0 = '#575279'
+color_bg1 = '#f6eee7'
+color_bg3 = '#f4ece4'
+color_accent = '#debabf'
+color_secondary = '#f3d1a3'
+color_tertiary = '#b8cdcd'
+color_quaternary = '#c5b7cb'
+color_green = '#286983'
+color_purple = '#907aa9'
+color_red = '#b4637a'
+
+[palettes.tokyo_night]
+color_fg0 = '#a9b1d6'
+color_bg1 = '#262738'
+color_bg3 = '#2a2c3f'
+color_accent = '#723f4f'
+color_secondary = '#695640'
+color_tertiary = '#405179'
+color_quaternary = '#2f5c68'
+color_green = '#9ece6a'
+color_purple = '#ad8ee6'
+color_red = '#f7768e'
+
+# ============================================================================
+# MODULES
+# ============================================================================
+
+[os]
+disabled = false
+style = "bg:color_accent fg:color_fg0"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "bg:color_accent fg:color_fg0"
+style_root = "bg:color_accent fg:color_fg0"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:color_fg0 bg:color_secondary"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:color_tertiary"
+format = '[[ $symbol $branch ](fg:color_fg0 bg:color_tertiary)]($style)'
+
+[git_status]
+style = "bg:color_tertiary"
+format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_tertiary)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[c]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[cpp]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[php]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[java]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_quaternary"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_quaternary)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:color_bg3"
+format = '[[ $symbol( $context) ](fg:color_fg0 bg:color_bg3)]($style)'
+
+[conda]
+symbol = "  "
+style = "bg:color_bg3"
+format = '[[ $symbol( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
+
+[pixi]
+style = "bg:color_bg3"
+format = '[[ $symbol( $version)( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:color_bg1"
+format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:color_green)'
+error_symbol = '[❯](bold fg:color_red)'
+vimcmd_symbol = '[❮](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[❮](bold fg:color_purple)'
+vimcmd_replace_symbol = '[❮](bold fg:color_purple)'
+vimcmd_visual_symbol = '[❮](bold fg:color_secondary)'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+disabled = false
+show_notifications = true
+min_time_to_notify = 45000

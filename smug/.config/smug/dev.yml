@@ -1,0 +1,29 @@
+session: dev
+root: ~/Documents/coding
+
+windows:
+  - name: nvim
+    layout: main-vertical
+    commands:
+      - nvim
+    panes:
+      - commands:
+          - ""
+      - commands:
+          - nvim
+
+  - name: git
+
+  - name: build
+    layout: tiled
+    panes:
+      - commands:
+          - ""
+      - commands:
+          - ""
+      - commands:
+          - ""
+
+  - name: spare
+
+  - name: lang
